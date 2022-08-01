@@ -63,8 +63,8 @@ export class Movies {
   @UpdateDateColumn({
     name: "updated_at",
     type: "timestamptz",
-    default: () => "CURRENT_TIMESTAMP(6)",
-    onUpdate: "CURRENT_TIMESTAMP(6)",
+    default: () => "CURRENT_TIMESTAMPTZ(6)",
+    onUpdate: "CURRENT_TIMESTAMPTZ(6)",
   })
   updatedAt: Date
 }
