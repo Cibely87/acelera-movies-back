@@ -15,5 +15,5 @@ export const defineRoutes = (app) => {
   app.get("/movie/:id", getMoviesId)
 
   app.post("/movie", postMovie)
-  app.delete("movie/:id", deleteMovieId)
+  app.delete("/movie/:id", deleteMovieId)
 }
