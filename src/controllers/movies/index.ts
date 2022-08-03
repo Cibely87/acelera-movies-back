@@ -63,3 +63,14 @@ const createMovie = (body) => {
     awards,
   }
 }
+
+export const deleteMovieId = async (request, response) => {
+  try {
+    const { id } = request.params
+    const getMovies = getRepository(Movies)
+    const result = await getMovies.delete(id)
+    return response.status(200).json(result)
+  } catch (error) {
+    return response.status(500).json(error)
+  }
+}
